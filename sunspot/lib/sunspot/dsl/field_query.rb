@@ -32,7 +32,7 @@ module Sunspot
         @query.add_sort(sort)
       end
 =end
-      def sort_by sort_string
+      def order_by sort_string
         @query.add_sort(sort_string)
       end
       # 
