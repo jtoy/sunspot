@@ -19,6 +19,7 @@ module Sunspot
       # field_name<Symbol>:: the field to use for ordering
       # direction<Symbol>:: :asc or :desc (default :asc)
       #
+=begin
       def order_by(field_name, direction = nil)
         sort =
           if special = Sunspot::Query::Sort.special(field_name)
@@ -30,7 +31,10 @@ module Sunspot
           end
         @query.add_sort(sort)
       end
-
+=end
+      def sort_by sort_string
+        @query.add_sort(sort_string)
+      end
       # 
       # DEPRECATED Use <code>order_by(:random)</code>
       #
